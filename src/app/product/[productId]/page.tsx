@@ -8,7 +8,7 @@ type Props = {
 };
 
 async function getData(id: number) {
-  const res = await fetch(`http:localhost:3000/api/products/${id}`);
+  const res = await fetch(`https://next-js14-course.vercel.app/api/products/${id}`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
