@@ -20,7 +20,7 @@ export default function Products() {
   return (
     <div className="p-5">
       <p className="text-2xl font-semibold pb-10">Product Listing Below</p>
-      <div className="grid grid-cols-3 gap-10 w-full">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-10 w-full">
         {productsList.map((item: Props, index: number) => (
           <div key={index} className="" onClick={() => handleNavigate(item)}>
             <div className="bg-white rounded-md shadow-md">
