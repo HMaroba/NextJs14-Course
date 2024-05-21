@@ -26,9 +26,12 @@ export const generateMetadata = async ({
     title: data?.title,
     description : data?.description,
     openGraph: {
-      images: [
-        "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Flaptops%2F&psig=AOvVaw3X79l6D6fOVUeFRaMwyqZY&ust=1716395653303000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKDpvZuWn4YDFQAAAAAdAAAAABAE",
-      ],
+      images: {
+        url: 'https://images.pexels.com/photos/7974/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        width: 800,
+        height: 600,
+        alt: data?.title,
+      }
     },
   };
 };
