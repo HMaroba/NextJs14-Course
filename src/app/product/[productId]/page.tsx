@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import React from "react";
-import Products, { productsList } from "../page";
 
 type Props = {
   params: {
