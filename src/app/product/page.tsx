@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import laptopImage from "./laptop.jpeg";
 
-const products = [
+export const productsList = [
   {
     id: 1,
     title: "Laptop",
@@ -51,7 +51,7 @@ export default function Products() {
     <div className="p-5">
       <p className="text-2xl font-semibold pb-10">Product Listing Below</p>
       <div className="grid grid-cols-3 gap-10 w-full">
-        {products.map((item: Props, index: number) => (
+        {productsList.map((item: Props, index: number) => (
           <div key={index} className="" onClick={() => handleNavigate(item)}>
             <div className="bg-white rounded-md shadow-md">
               <Image src={laptopImage} alt="Hello" width={500} height={250} />
