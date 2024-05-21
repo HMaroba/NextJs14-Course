@@ -3,24 +3,25 @@ import React from "react";
 
 type Props = {
   params: {
-    productId: string;
+    productId: number;
   };
 };
 
-async function getData(id: string) {
+async function getData(id: number) {
   const res = await fetch(`http:localhost:3000/api/products/${id}`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
-
+ 
   return res.json();
 }
 
-export  const generateMetadata = ({ params }: Props): Metadata => {
-  const data =  getData(params.productId);
-  console.log('Data' +data);
-  
+export const generateMetadata = async ({
+  params,
+}: Props): Promise<Metadata> => {
+  const data = await getData(params.productId);
+
   return {
     title: `Product ${params.productId}`,
     openGraph: {
@@ -34,11 +35,13 @@ export default async function ProductDetails({ params }: Props) {
   // const productData = productsList.find((item: any) => item.id = params.productId);
   // console.log(productData);
   const data = await getData(params.productId);
+  const productData = JSON.stringify(data);
+  
   
 
   return (
     <div className="p-5">
-      <p>Details for Product {params.productId}</p>
+      <p>Details for Product {productData}</p>
     </div>
   );
 }
