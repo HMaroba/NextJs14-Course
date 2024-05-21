@@ -49,7 +49,7 @@ export default function Products() {
   };
   return (
     <div className="p-5">
-      <p className="text-2xl text-blue-400 pb-10">Product Listing Below</p>
+      <p className="text-2xl font-semibold pb-10">Product Listing Below</p>
       <div className="grid grid-cols-3 gap-10 w-full">
         {products.map((item: Props, index: number) => (
           <div key={index} className="" onClick={() => handleNavigate(item)}>
