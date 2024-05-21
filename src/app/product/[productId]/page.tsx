@@ -7,11 +7,12 @@ type Props = {
   };
 };
 
-export const generateMetadata = ({ params }: Props): Metadata => {
-  return {
-    title: `Product ${params.productId}`,
-  };
-};
+
+export const generateMetadata = ({params} : Props) : Metadata => {
+    return{
+        title: `Product ${params.productId}`
+    }
+}
 export default function ProductDetails({ params }: Props) {
   return (
     <div>
