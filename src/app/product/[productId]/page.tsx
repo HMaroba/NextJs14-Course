@@ -26,6 +26,8 @@ export const generateMetadata = async ({
     title: data?.title,
     description : data?.description,
     openGraph: {
+      title: data?.title,
+      description : data?.description,
       images: {
         url: 'https://images.pexels.com/photos/7974/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         width: 800,
