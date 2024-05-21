@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import React from "react";
-import Products from "../page";
+import Products, { productsList } from "../page";
 
 type Props = {
   params: {
@@ -18,7 +18,9 @@ export const generateMetadata = ({params} : Props) : Metadata => {
     }
 }
 export  default function ProductDetails({ params }: Props) {
-    const productData = Products.filter((item: any) => item.id = params.productId); 
+    // const productData = productsList.find((item: any) => item.id = params.productId); 
+    // console.log(productData);
+    
   return (
     <div className="p-5">
       <p>Details for Product {params.productId}</p>
