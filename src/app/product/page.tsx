@@ -43,7 +43,7 @@ export default function Products() {
       <div className="grid grid-cols-3 gap-10 w-full">
         {products.map((item: any, index: number) => (
           <div key={index} className="" onClick={() => handleNavigate()}>
-            <div className="bg-gray-100 rounded-md shadow-md">
+            <div className="bg-white rounded-md shadow-md">
             <Image src={laptopImage} alt="Hello" width={500} height={250} />
              <div className="p-5">
              <p>{item.id}</p>
