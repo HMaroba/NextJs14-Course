@@ -24,7 +24,7 @@ export default async function PostList() {
   const data = await getData();
 
   return (
-    <div className="p-5">
+    <div className="p-3">
       <p className="text-2xl font-semibold pb-10">Posts Listing Below</p>
       <Suspense fallback={<Loading />}>
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-10 w-full">

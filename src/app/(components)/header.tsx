@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <nav className="flex bg-blue-600 p-3 text-white">
-      <p className="text-4xl font-medium">Next JS</p>
+    <nav className="flex bg-blue-600 p-3 text-white fixed z-50">
+      <Link href={'/'} className="text-4xl font-medium">Next JS</Link>
       <div className="ml-auto flex gap-5 p-2">
         <Link href={"/product"} className=" text-lg hover:text-gray-600">
           About
