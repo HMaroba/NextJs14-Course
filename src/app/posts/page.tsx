@@ -30,18 +30,18 @@ export default async function PostList() {
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-10 w-full">
           {data.map((item: Props, index: number) => (
             <div key={index} className="">
-              <Link
+              <div
                 className="bg-white rounded-md shadow-md border border-gray-300 w-full"
-                href={`/product/${item.id}`}
+          
               >
-                <div className="p-5">
+                <div className="p-5 max-h-40 min-h-40">
                   <p className="text-lg">{item.id}</p>
                   <p className="text-lg">{item.name}</p>
                   <p className="text-xl font-semibold ml-auto text-blue-800">
                     {item.email}
                   </p>
                 </div>
-              </Link>
+              </div>
             </div>
           ))}
         </div>

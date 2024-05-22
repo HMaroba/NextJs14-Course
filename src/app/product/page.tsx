@@ -33,9 +33,9 @@ export default async function Products() {
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-10 w-full">
           {data.map((item: Props, index: number) => (
             <div key={index} className="">
-              <Link
+              <div
                 className="bg-white rounded-md shadow-md"
-                href={`/product/${item.id}`}
+                
               >
                 <Image src={laptopImage} alt="Hello" width={500} height={250} />
                 <div className="p-5 flex">
@@ -45,7 +45,7 @@ export default async function Products() {
                     {item.price}
                   </p>
                 </div>
-              </Link>
+              </div>
             </div>
           ))}
         </div>
