@@ -9,10 +9,8 @@ import Link from "next/link";
 
 type Props = {
   id: number;
-  title: string;
-  description: string;
-  price: number;
-  currency: string;
+  name: string;
+  email: string;
 };
 
 async function getData() {
@@ -39,10 +37,9 @@ export default async function PostList() {
               >
                 <Image src={laptopImage} alt="Hello" width={500} height={250} />
                 <div className="p-5 flex">
-                  <p className="text-lg">{item.title}</p>
+                  <p className="text-lg">{item.name}</p>
                   <p className="text-xl font-semibold ml-auto text-blue-800">
-                    {item.currency}
-                    {item.price}
+                    {item.email}
                   </p>
                 </div>
               </Link>

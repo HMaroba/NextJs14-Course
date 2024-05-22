@@ -9,10 +9,10 @@ export default function Home() {
         <Link href={"/product"} className=" text-blue-600 text-lg">
           About
         </Link>
-        <Link href={"/product"} className=" text-blue-600 text-lg">
-          Services
-        </Link>
 
+        <Link href={"/posts"} className=" text-blue-600 text-lg">
+          Posts
+        </Link>
         <Link href={"/product"} className=" text-blue-600 text-lg">
           Products
         </Link>
