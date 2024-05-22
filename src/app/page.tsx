@@ -3,9 +3,20 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col  p-24">
-      <p className="text-4xl font-medium">Next JS 14 FULL COURSE</p>
-      <Link href={'/product'} className="mt-5 text-blue-600">Products</Link>
-    </main>
+    <nav className="flex">
+      <p className="text-4xl font-medium">Next JS</p>
+      <div className="ml-auto flex gap-5 p-2">
+        <Link href={"/product"} className=" text-blue-600 text-lg">
+          About
+        </Link>
+        <Link href={"/product"} className=" text-blue-600 text-lg">
+          Services
+        </Link>
+
+        <Link href={"/product"} className=" text-blue-600 text-lg">
+          Products
+        </Link>
+      </div>
+    </nav>
   );
 }

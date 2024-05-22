@@ -5,6 +5,7 @@ import React from "react";
 import laptopImage from "./laptop.jpeg";
 import { Suspense } from "react";
 import Loading from "../(components)/loading";
+import Link from "next/link";
 
 type Props = {
   id: number;
@@ -16,21 +17,14 @@ type Props = {
 
 async function getData() {
   const res = await fetch(`https://next-js14-course.vercel.app/api/products/`);
-
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
-
   return res.json();
 }
 
 export default async function Products() {
-  // const router = useRouter();
-  // const handleNavigate = (item: Props) => {
-  //   router.push(`/product/${item.id}`);
-  // };
   const data = await getData();
-  // console.log(data);
 
   return (
     <div className="p-5">
@@ -39,7 +33,10 @@ export default async function Products() {
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-10 w-full">
           {data.map((item: Props, index: number) => (
             <div key={index} className="">
-              <div className="bg-white rounded-md shadow-md">
+              <Link
+                className="bg-white rounded-md shadow-md"
+                href={`/product/${item.id}`}
+              >
                 <Image src={laptopImage} alt="Hello" width={500} height={250} />
                 <div className="p-5 flex">
                   <p className="text-lg">{item.title}</p>
@@ -48,7 +45,7 @@ export default async function Products() {
                     {item.price}
                   </p>
                 </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>
