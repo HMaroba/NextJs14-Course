@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Suspense } from 'react'
 import React from "react";
 
 type Props = {
@@ -46,9 +47,11 @@ export default async function ProductDetails({ params }: Props) {
   
 
   return (
+    <Suspense fallback={<p>Loading feed...</p>}>
     <div className="p-5">
       <p>Details for Product {data?.id}</p>
       <p>{data?.description}</p>
     </div>
+    </Suspense>
   );
 }
