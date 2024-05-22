@@ -10,7 +10,7 @@ type Props = {
   id: number;
   title: string;
   description: string;
-  price : number;
+  price: number;
   currency: string;
 };
 
@@ -27,9 +27,9 @@ export default function Products() {
           <div key={index} className="" onClick={() => handleNavigate(item)}>
             <div className="bg-white rounded-md shadow-md">
               <Image src={laptopImage} alt="Hello" width={500} height={250} />
-              <div className="p-5">
-                <p>{item.id}</p>
-                <p>{item.title}</p>
+              <div className="p-5 flex">
+                <p className="text-lg">{item.title}</p>
+                <p className="text-xl font-semibold ml-auto">{item.price}</p>
               </div>
             </div>
           </div>
