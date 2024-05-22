@@ -10,6 +10,8 @@ type Props = {
   id: number;
   title: string;
   description: string;
+  price : number;
+  currency: string;
 };
 
 export default function Products() {
