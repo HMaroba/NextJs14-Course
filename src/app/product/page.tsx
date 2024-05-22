@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import laptopImage from "./laptop.jpeg";
-import { productsList } from "../lib/productList";
+import { Suspense } from "react";
 
 type Props = {
   id: number;
@@ -34,6 +34,7 @@ export default async function Products() {
   return (
     <div className="p-5">
       <p className="text-2xl font-semibold pb-10">Product Listing Below</p>
+      <Suspense fallback={<p>Loading feed...</p>}>
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-10 w-full">
         {data.map((item: Props, index: number) => (
           <div key={index} className="">
@@ -50,6 +51,7 @@ export default async function Products() {
           </div>
         ))}
       </div>
+      </Suspense>
     </div>
   );
 }
