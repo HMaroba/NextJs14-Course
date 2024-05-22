@@ -1,4 +1,4 @@
-import { productsList } from "@/app/lib/productList";
+import { PostsList } from "@/app/lib/posts";
 import { NextResponse } from "next/server";
 
 export async function GET(
@@ -8,7 +8,7 @@ export async function GET(
   const { id } = params;
 
   try {
-    const product =  productsList.find((item: any) => item.id == id);
+    const product =  PostsList.find((item: any) => item.id == id);
 
 
     const productId = product?.id;
