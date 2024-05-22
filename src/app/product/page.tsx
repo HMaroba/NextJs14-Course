@@ -29,7 +29,7 @@ export default function Products() {
               <Image src={laptopImage} alt="Hello" width={500} height={250} />
               <div className="p-5 flex">
                 <p className="text-lg">{item.title}</p>
-                <p className="text-xl font-semibold ml-auto text-blue-800 flex gap-2">
+                <p className="text-xl font-semibold ml-auto text-blue-800">
                   {item.currency}
                   {item.price}
                 </p>
