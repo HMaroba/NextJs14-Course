@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import React from "react";
-import laptopImage from "./laptop.jpeg";
 import { Suspense } from "react";
 import Loading from "../(components)/loading";
 import Link from "next/link";
@@ -32,11 +31,11 @@ export default async function PostList() {
           {data.map((item: Props, index: number) => (
             <div key={index} className="">
               <Link
-                className="bg-white rounded-md shadow-md"
+                className="bg-white rounded-md shadow-md border border-gray-300 w-full"
                 href={`/product/${item.id}`}
               >
-                <Image src={laptopImage} alt="Hello" width={500} height={250} />
-                <div className="p-5 flex">
+                <div className="p-5">
+                  <p className="text-lg">{item.id}</p>
                   <p className="text-lg">{item.name}</p>
                   <p className="text-xl font-semibold ml-auto text-blue-800">
                     {item.email}

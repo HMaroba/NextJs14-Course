@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export default function Header() {
   return (
     <nav className="flex bg-blue-600 p-3 text-white">
       <p className="text-4xl font-medium">Next JS</p>
