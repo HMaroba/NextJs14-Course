@@ -26,7 +26,7 @@ export default async function Data() {
 
   return (
     <Suspense fallback={<Loading />}>
-      <PostList Postdata={data} />
+      {/* <PostList Postdata={data} /> */}
     </Suspense>
   );
 }
