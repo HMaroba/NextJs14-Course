@@ -28,7 +28,7 @@ export default async function Todo() {
           name="description"
           required
         />
-        <button className="w-full p-2 bg-green-400 text-white rounded-lg mt-5">
+        <button className="w-full p-2 bg-blue-500 text-white rounded-lg mt-5">
           Save
         </button>
       </form>
