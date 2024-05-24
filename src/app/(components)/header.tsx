@@ -7,7 +7,7 @@ export default function Header() {
     const currentPath = usePathname();
     
   return (
-    <nav className="flex bg-blue-600 p-3  fixed z-50 w-full">
+    <nav className="flex flex-row bg-blue-600 p-3  fixed z-50 w-full">
       <Link href={"/"} className="text-4xl text-white font-medium">
         Next JS
       </Link>
@@ -28,6 +28,16 @@ export default function Header() {
           }`}
         >
           Posts
+        </Link>
+        <Link
+          href={"/todos"}
+          className={`text-lg text-white hover:text-gray-400 ${
+            currentPath === '/todos' ? 
+                'text-gray-400' 
+            : null
+          }`}
+        >
+          Todos
         </Link>
         <Link
           href={"/product"}
