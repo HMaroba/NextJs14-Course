@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import { revalidatePath } from "next/cache";
+import Form from "../(components)/form";
 const prisma = new PrismaClient();
 
 export default async function Todo() {
@@ -21,17 +22,7 @@ export default async function Todo() {
   return (
     <div className="flex min-h-screen flex-col justify-center items-center p-24">
       <p className="text-3xl">Todos Page</p>
-      <form action={addTodo} className="flex flex-col w-3/5 p-10">
-        <input
-          className="p-3 w-full border border-gray-400 rounded-md"
-          placeholder="Enter todo"
-          name="description"
-          required
-        />
-        <button className="w-full p-2 bg-blue-500 text-white rounded-lg mt-5">
-          Save
-        </button>
-      </form>
+     <Form />
 
       <ul className="list-disc">
         {todos.map((todo) => (
