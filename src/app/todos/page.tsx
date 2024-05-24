@@ -31,7 +31,9 @@ export default async function Todo() {
             <li>{todo.description}</li>
             <form action={deleteTodo}>
               <input name="id" type="hidden" value={todo.id} />
-             
+              <button className="bg-red-500 p-2 rounded-md text-white">
+                Delete
+              </button>
             </form>
           </div>
         ))}
