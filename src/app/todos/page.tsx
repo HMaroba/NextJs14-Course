@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import { revalidatePath } from "next/cache";
 const prisma = new PrismaClient();
 
 export default async function Todo() {
@@ -13,6 +14,8 @@ export default async function Todo() {
         description: description as string,
       },
     });
+
+    revalidatePath("/todos")
   };
 
   return (
